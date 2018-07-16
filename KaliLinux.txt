@@ -1,0 +1,314 @@
+Questions-
+
+Total Questions 101
+
+1.3.1.3 - Exercises (Page no. 50)
+
+	1. Research Bash loops and write a short script to perform a ping sweep of your
+	target IP range of 10.11.1.0/24.
+
+	2. Try to do the above exercise with a higher-level scripting language such as
+	Python, Perl, or Ruby.
+
+2.2.1 - Exercises (Pag no. 66)
+	1. Use Ncat to create an encrypted reverse shell from your Windows system to your
+	Kali machine
+	
+	2. Create an encrypted bind shell on your Windows VM. Try to connect to it from
+	Kali without encryption. Does it still work?
+	
+	3. Make an unencrypted Ncat bind shell on your Windows system. Connect to the
+	shell using Netcat. Does it work?
+
+2.3.5 - Exercises (Page no. 72)
+	
+	1. Use Wireshark to capture the network activity of Netcat connecting to port 110
+	(POP3) and attempting a login.
+	
+	2. Read and understand the output. Where is the session three-way handshake?
+	Where is the session closed?
+	
+	3. Follow the TCP stream to read the login attempt.
+	
+	4. Use the display filter to only see the port 110 traffic
+
+	5. Re-run the capture, this time using the capture filter to only collect port 110
+
+2.4.3 - Exercises (Page no. 77)
+
+	1. Use tcpdump to recreate the wireshark exercise of capturing traffic on port 110.
+	
+	2. Use the -X flag to view the content of the packet. If data is truncated, investigate
+	how the -s flag might help.
+	
+3.1.3 - Exercises (Page no. 88)
+	
+	1. Choose an organization and use Google to gather as much information as
+	possible about it
+
+	2. Use the Google filetype search operator and look for interesting documents from
+	the target organization	
+
+	3. Re-do the exercise on your company’s domain. Can you find any data leakage
+	you were not aware of?
+
+3.2.1 - Exercise (Page no. 89)
+	
+	1. Use theharvester to enumerate email addresses belonging to the organization
+	you chose in the previous exercises
+
+	2. Experiment with different data sources (-b). Which work best for you?
+
+3.3.3 - Exercise (Page no. 94)
+
+	1. Use the whois tool in Kali to identify the name servers of your target organization
+
+4.1.7 - Exercises (Page no. 108)
+
+	1. Find the DNS servers for the megacorpone.com domain
+
+	2. Write a small Bash script to attempt a zone transfer from megacorpone.com
+	
+	3. Use dnsrecon to attempt a zone transfer from megacorpone.com
+
+4.2.8 - Exercises (Page no. 121)
+
+	1. Use nmap to conduct a ping sweep of your target IP range and save the output
+	to a file, so that you can grep for hosts that are online.
+
+	2. Scan the IPs you found in exercise 1 for open webserver ports. Use nmap to find
+	the web server and operating system versions.
+
+	3. Use the NSE scripts to scan the servers in the labs which are running the SMB
+	service.
+
+	4. Explore the various command line options that nmap offers while scanning an
+	online host you discovered within your target IP range. Monitor the bandwidth
+	usage changes for the different options. Weigh the use of collecting as much
+	information as possible against the resources it takes to gather it.
+
+4.3.4 - Exercises (Page no. 129)
+
+	1. Use Nmap to make a list of which SMB servers in the lab are running Windows.
+
+	2. Use NSE scripts to scan these systems for SMB vulnerabilities.
+
+	3. Use nbtscan and enum4linux against these systems and identify the kinds of
+	data you can obtain from different versions of Windows.
+
+4.4.1 - Exercise (Page no. 131)
+	
+	1. Search your target network range, and see if you can identify any systems that respond to the SMTP VRFY command.
+
+4.5.4 - Exercises (Page no. 135)
+
+	1. Scan your target network with onesixtyone. Identify any SNMP servers.
+
+	2. Use snmpwalk and snmp-check to gather information about the discovered targets.
+
+5.2.2 - Exercises (Page no. 147)
+
+	1. Use nmap scripts and OpenVAS to conduct targeted scans (against single hosts)
+	against systems in your target network. 
+
+	2. Account for the traffic using iptables. How many resources does scanning a
+	single host require, in terms of network bandwidth, and time?
+
+	3. Consider the sort of vulnerabilities a scanner will identify. What are the
+	limitations of the tool? Why?
+
+6.1.4 - Exercises (Page no. 153)
+
+	1. Fuzz SLmail and replicate the crash.
+
+	2. Examine the memory in the stack, when SLmail crashes. What does it look like?
+	Consider how this might be useful.
+
+7.2.3 - Exercises (Page no. 158)
+
+	1. Write a standalone script to replicate the crash.
+
+	2. Determine the offset of EIP for the data that is being sent.
+
+	3. Update your standalone script to place a unique value into EIP, to ensure your offsets are correct.
+
+7.4.1 - Exercises (Page no. 162)
+
+	1. Identify the bad characters that cannot be included in the payload.
+
+	2. Understand why these characters are not allowed. What does the hex translate to in ASCII?
+
+7.5.2 - Exercises (Page no. 167)
+
+	1. Identify a JMP ESP that is usable in the exploit.
+
+	2. Update your PoC to include the discovered JMP ESP, set a break point on it, and follow the execution.
+
+7.7.1 - Exercises (Page no. 173)	
+
+	1. Update your PoC to include a working payload.
+
+	2. Obtain a shell from SLmail.
+
+7.8.1 - Exercises (Page no. 174)
+
+	1. Update the exploit so that SLmail still runs after exploitation.
+	
+	2. In the Tools folder on the Desktop of your Windows VM, there is a
+	VulnServer.exe application. Using the proof of concept from the following forum post, develop a working exploit:
+
+		I. https://forums.offensive-security.com/showthread.php?t=2231
+
+8.2.1 - Exercise (Page no. 177)
+
+	1. Create a PoC that crashes the Crossfire server.
+
+8.6.1 - Exercises (Page no. 181)
+
+	1. Update your POC so you have control of the EIP register.
+	
+	2. Identify what characters you cannot use as part of your payload.
+
+8.8.1 - Exercise (Page no. 186)
+
+	1. Update your proof of concept and obtain a shell from Crossfire.
+
+9.2.3 - Exercises (Page no. 196)
+
+	1. Fix and compile 643.c to exploit your SLMail installation
+	
+	2. Fix and compile 646.c under Linux using mingw
+
+11.2.3 - Exercises (Page no. 215)
+
+	1. Use pyinstaller to compile a Python exploit into a standalone .exe.
+
+	2. Install Photodex ProShow Producer on your Windows host. Escalate privileges from a standard user account.
+
+	3. Can you find additional ways of escalating permissions, outside of what is described in the course?
+
+12.2.3 - Exercises (Page no. 223)
+
+	1. Use MS12-037 to exploit your Windows host from your Kali system, using the default exploit.
+	
+	2. Enable the Windows firewall and remove any whitelisted processes (e.g.iexplore.exe) or port numbers (TCP 80, 443, 4444) and try to 		exploit it again. Identify why the attack no longer works and correct it so you can get a shell.
+
+12.3.1 - Exercises (Page no. 229)
+
+	1. Exploit your Windows host with a Java payload attack.
+	
+	2. Play with the settings you used when generating the payload. What makes the attack look more believable? 
+	What makes it look less believable?
+
+13.2.3 - Exercises (Page no. 237)
+
+	1. Exploit the XSS vulnerability in the guestbook application to get the admin cookie and hijack the session. The admin user is 	‘offsec’ with password ‘123456’.	
+
+	2. Consider what other ways an XSS here might be able to be used for attacks.
+
+	3. Does this exploit attack the server or clients of the site?
+
+13.3.1.3 - Exercises (Page no. 244)
+
+	1. Obtain code execution through the use of the LFI attack.
+
+	2. Using what you learned on file transfers, use the code execution to obtain a full shell.
+13.3.2.1 - Exercise (Page no. 246)
+
+	1. Exploit the RFI vulnerability in the web application and get your shell.
+
+13.4.1.1 - Exercises (Page no. 252)
+
+	1. Interact with the MySQL database and manually execute the commands as the web server does as part of the authentication process. 		Understand the vulnerability.
+
+	2. Utilize SQL injection to bypass the login process.
+	
+	3. Understand why the username is reported like it is once the authentication process is bypassed.
+
+13.4.5.1 - Exercises (Page no. 257)
+
+	1. Enumerate the structure of the database using SQL injection.
+	
+	2. Understand how and why you can pull data from your injected commands and have it displayed on the screen.
+	
+	3. Extract all users and associated passwords from the database.
+
+13.4.6.1 - Exercises (Page no. 259)
+
+	1. Exploit the SQL injection along with the MySQL INTO OUTFILE function to obtain code execution.
+
+	2. Turn the simple code execution into a full shell.
+
+13.5.1 - Exercises (Page no. 261)
+
+	1. Use Tamper Data to cause SQL injection on the lang parameter.
+
+	2. Identify how far you can push this vulnerability. Can you obtain a full shell?
+
+13.6.1 - Exercises (Page no. 266)
+
+	1. Use the sqlmap crawl option to enumerate the various pages of the vulnerable web application and search for SQL injection 		  vulnerabilities.
+	2. Use sqlmap to obtain a full dump of the database.
+
+	3. Use sqlmap to obtain an interactive shell.
+
+	4. Use sqlmap in the lab network to gather information on various targets.
+	
+	5. Use sqlmap in the lab network to obtain a shell on a target machine. Can you exploit the SQL injection manually?
+
+14.1.5 - Exercises (Page no. 273)
+
+	1. Use fgdump on your Windows system.
+
+	2. Use WCE on your Windows system.
+
+14.2.3 - Exercises (Page no. 281)
+
+	1. Conduct targeted password attacks on systems within your target network range.
+	
+	2. Identify the protocols that run well. Which do not?
+
+	3. Ensure that you don't lock out any accounts.
+
+14.3.6 - Exercises (Page no. 289)
+
+	1. Use the different tools covered in this module to conduct password attacks against various services in the lab.
+
+	2. Use Metasploit to exploit one of the SMB servers in the labs. Dump the password hashes and attempt a pass-the-hash attack against 		another system.
+
+15.5.1 - Exercises (Page no. 304)
+
+	1. Experiment with the various tunneling options presented.
+
+	2. Use SSH to proxy out your web surfing through your Kali host.	
+
+16.4.3 - Exercises (Page no. 316)
+
+	1. Start the required postgresql service and launch msfconsole
+	
+	2. Use the SMB, HTTP, and any other interesting auxiliary modules to scan the lab systems.
+
+	3. Review the host information in the database. Try to fill it with as much information as you can.
+
+16.5.1 - Exercises (Page no. 320)
+
+	1. Exploit SLMail using the existing Metasploit module.
+
+	2. Using the SMB vulnerability data you gathered from Nmap, use Metasploit to exploit vulnerable lab systems.
+
+16.6.8 - Exercises (Page no. 330)
+
+	1. Create a staged and a non-staged Linux binary payload to use on Kali.
+
+	2. Setup a Netcat listener and run the non-staged payload. Does it work?
+
+	3. Setup a Netcat listener and run the staged payload. Does it work?
+
+	4. Get a Meterpreter shell on your Windows system. Practice file transfers.
+
+	5. Inject a payload into plink.exe. Test it on your Windows system.
+
+16.7.1 - Exercise (Page no. 333)
+
+	1. Create a new Metasploit module for your Crossfire exploit.
+	
